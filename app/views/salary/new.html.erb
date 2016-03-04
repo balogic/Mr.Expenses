@@ -1,0 +1,19 @@
+<center><h1>Add new purchase</h1></center>
+
+<br>
+<center><%= form_for :salary do |f| %>
+<p>
+<%= f.label :amount %>
+<%= f.text_field :amount %>
+</p>
+
+<p>
+<%= f.label :purchase %>
+<%= f.text_field :purchase %>
+</p>
+
+<p>
+<%= f.submit "Add" %>
+</p></center>
+
+<% end %>
