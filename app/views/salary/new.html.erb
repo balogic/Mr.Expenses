@@ -1,7 +1,7 @@
-<center><h1>Add new purchase</h1></center>
+<center><h1>Add new purchase</h1>
 
 <br>
-<center><%= form_for :salary do |f| %>
+<%= form_for :salary, url: salary_index_path do |f| %>
 <p>
 <%= f.label :amount %>
 <%= f.text_field :amount %>

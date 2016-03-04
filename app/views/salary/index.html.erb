@@ -1,1 +1,21 @@
-<center><h1>My Salary</h1></center>
+<center>
+	<h1>All Purchases</h1>
+
+	<%= link_to 'New Expense', new_salary_path %>
+
+	<br>
+	<br>
+
+	<table>
+		<tr>
+			<th>Amount</th>
+			<th>Purchase</th>
+		</tr>
+		<% for a in @salary do %>
+		<tr>
+			<td><%= a.amount %></td>
+			<td><%= a.purchase %></td>
+		</tr>
+		<% end %>
+	</table>
+</center>
