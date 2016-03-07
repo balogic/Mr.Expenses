@@ -6,10 +6,26 @@ class SalaryController < ApplicationController
   def new
   end
 
+  def edit
+  	@salary = Salary.find(params[:id])
+  end
+
   def create
   	@salary = Salary.new(salary_params)
-  	@salary.save
-  	redirect_to @salary
+  	if @salary.save
+  		redirect_to @salary
+  	else
+  		render 'new'
+  	end
+  end
+
+  def update
+  	@salary = Salary.find(params[:id])
+  	if @salary.update(salary_params)
+  		redirect_to @salary
+  	else
+  		render 'edit'
+  	end
   end
 
   def show
