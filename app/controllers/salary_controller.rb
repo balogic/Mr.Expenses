@@ -32,6 +32,13 @@ class SalaryController < ApplicationController
   	@salary = Salary.find(params[:id])
   end
 
+  def destroy
+  	@salary = Salary.find(params[:id])
+  	@salary.destroy
+  	redirect_to salary_index_path
+  end
+  
+  private
   def salary_params
   	params.require(:salary).permit(:amount, :purchase)
   end

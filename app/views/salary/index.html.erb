@@ -17,6 +17,7 @@
 			<td><%= a.purchase %></td>
 			<td><%= link_to 'View', salary_path(a) %></td>
 			<td><%= link_to 'Edit', edit_salary_path(a) %></td>
+			<td><%= link_to 'Delete', salary_path(a), method: :delete %></td>
 		</tr>
 		<% end %>
 	</table>
