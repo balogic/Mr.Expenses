@@ -12,13 +12,18 @@
 <nav>
 <ul class="nav nav-tabs navbar-right">
 <li><%= link_to "Home", '/' %></li>
+<% if logged_in? %>
 <li><%= link_to "Add", '#' %></li>
 <li><%= link_to "Profile", '#' %></li>
+<li><%= link_to "Logout", logout_path %></li>
+<% else %>
+<li><%= link_to "Log in", login_path %></li>
+<% end %>
 </ul>
 </nav>
 </div>
 </header>
-	
+
 <div class="center jumbotron">
 
 <%= yield %>
