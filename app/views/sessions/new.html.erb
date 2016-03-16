@@ -1,17 +1,16 @@
 <center>
   <h2>Login</h2>
   <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-
- <%= form_for(:session, url: login_path) do |f| %>
-   <p>
-    <%= f.text_field :email, class: "form-control", placeholder: "Email" %>
-  </p>
-  <p>
-    <%= f.text_field :password, class: "form-control", placeholder: "Password" %>
-  </p>
-  <%= f.submit "Log in", class: "btn btn-success" %>
-  <% end %>
-</div>
-</div>
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(:session, url: login_path) do |f| %>
+      <p>
+        <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
+      </p>
+      <p>
+        <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+      </p>
+      <%= f.submit "Log in", class: "btn btn-success" %>
+      <% end %>
+    </div>
+  </div>
 </center>

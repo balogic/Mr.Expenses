@@ -1,17 +1,16 @@
 <h1>Editing Expense</h1>
-<%= form_for :salary, url: salary_path(@salary), method: :patch do |f| %>
-	<p>
-	<%= f.label :amount %><br>
-	<%= f.text_field :amount %><br>
-	</p>
-
-	<p>
-	<%= f.label :purchase %><br>
-	<%= f.text_field :purchase %><br>
-	</p>
-
-	<p>
-	<%= f.submit 'Update' %>
-	</p>
-
-	<% end %>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<%= form_for :salary, url: salary_path(@salary), method: :patch do |f| %>
+		<p>
+			<%= f.text_field :amount , class: form-control %><br>
+		</p>
+		<p>
+			<%= f.text_field :purchase, class: form-control %><br>
+		</p>
+		<p>
+			<%= f.submit 'Update', class: "btn btn-success" %>
+		</p>
+		<% end %>
+	</div>
+</div>

@@ -1,4 +1,12 @@
-<center><h1><%= gravatar_for @user %>&nbsp;&nbsp;&nbsp;<%= @user.name %>'s Profile</h1>
-<br>
-<p><b>Name:</b>&nbsp;<%= @user.name %></p>
-<p><b>Email:</b>&nbsp;<%= @user.email %></p></center>
+<div>
+  <center>
+  <h2><%= gravatar_for @user %>&nbsp;&nbsp;&nbsp;<%= @user.name %>'s Profile</h2>
+</center>
+</div>
+  <br>
+  <div>
+    <center>
+      <p><b>Name:</b>&nbsp;<%= @user.name %></p>
+      <p><b>Email:</b>&nbsp;<%= @user.email %></p>
+    </center>
+  </div>

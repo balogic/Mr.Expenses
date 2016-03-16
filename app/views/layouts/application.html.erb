@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Oh My Salary!</title>
+  <title>Mr.Expenses</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header>
-<div class="container">
-<nav>
-<ul class="nav nav-tabs navbar-right">
-<li><%= link_to "Home", '/' %></li>
-<% if logged_in? %>
-<li><%= link_to "Add", '#' %></li>
-<li><%= link_to "Profile", '#' %></li>
-<li><%= link_to "Logout", logout_path %></li>
-<% else %>
-<li><%= link_to "Log in", login_path %></li>
-<% end %>
-</ul>
-</nav>
-</div>
-</header>
+  <header>
+    <div class="container">
 
-<div class="center jumbotron">
-
-<%= yield %>
-
-</div>
-
+      <nav>
+        <ul class="nav nav-tabs navbar-right">
+          <% if logged_in? %>
+          <li><%= link_to "Add", '#' %></li>
+          <li><%= link_to "Profile", '#' %></li>
+          <li><%= link_to "Logout", logout_path %></li>
+          <% else %>
+          <li><%= link_to "Register", '/' %></li>
+          <li><%= link_to "Log in", login_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="center jumbotron">
+    <center>
+      <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+    </center>
+    <%= yield %>
+  </div>
 </body>
 </html>

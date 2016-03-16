@@ -1,19 +1,18 @@
 <center><h1>Add new purchase</h1>
-
-<br>
-<%= form_for :salary, url: salary_index_path do |f| %>
-<p>
-<%= f.label :amount %>
-<%= f.text_field :amount %>
-</p>
-
-<p>
-<%= f.label :purchase %>
-<%= f.text_field :purchase %>
-</p>
-
-<p>
-<%= f.submit 'Save' %>
-</p></center>
-
-<% end %>
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for :salary, url: salary_index_path do |f| %>
+      <p>
+        <%= f.text_field :amount, class: form-control, placeholder: "Amount" %>
+      </p>
+      <p>
+        <%= f.text_field :purchase, class: form-control, placeholder: "Purchase" %>
+      </p>
+      <p>
+        <%= f.submit "Save", class: "btn btn-success" %>
+      </p>
+    </center>
+    <% end %>
+  </div>
+</div>
