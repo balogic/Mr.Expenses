@@ -8,5 +8,6 @@
     <center>
       <p><b>Name:</b>&nbsp;<%= @user.name %></p>
       <p><b>Email:</b>&nbsp;<%= @user.email %></p>
+      <%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-primary" %>
     </center>
   </div>
